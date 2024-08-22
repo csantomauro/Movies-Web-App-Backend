@@ -1,0 +1,67 @@
+### Find ALl Movies
+GET http://localhost:8080/api/v1/movies
+
+### Find Movies By imdbId
+GET http://localhost:8080/api/v1/movies/tt1234567
+
+
+### Create new Review
+POST http://localhost:8080/api/v1/reviews
+Content-Type: application/json
+
+{
+  "reviewBody": "Nice worldbuilding, not super orginal...(Pocahontas)",
+  "imdbId": "tt0499549"
+}
+
+### Add new Movie
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": {
+    "timestamp": 32,
+    "date": "2024-08-21T13:04:30.000+00:00"
+  },
+  "imdbId": "tt1234567",
+  "title": "La Haine",
+  "releaseDate": "1995-05-31",
+  "trailerLink": "",
+  "poster": "",
+  "genres": [
+    "Noir",
+    "Drama"
+  ],
+  "backdrops": [],
+  "reviewIds": []
+}
+
+### Delete a Movie
+DELETE http://localhost:8080/api/v1/movies/tt1234567
+
+### Find ALl Directors
+GET http://localhost:8080/api/v1/directors
+
+### Add new Director
+POST http://localhost:8080/api/v1/directors
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "James Cameron",
+  "dateOfBirth": "1954-08-16",
+  "nationality": "Canadian",
+  "movies": []
+}
+
+### Delete a Director
+DELETE http://localhost:8080/api/v1/directors/1
+
+### Add new movie to director
+POST http://localhost:8080/api/v1/directors/movies
+Content-Type: application/json
+
+{
+  "directorId": "2",
+  "movieId": "tt0499549"
+}
