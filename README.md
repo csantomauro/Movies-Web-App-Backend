@@ -9,7 +9,6 @@ dependency management and MongoDB as the database.
 - **Director Management**: Add, retrieve, and delete directors. Associate directors with movies.
 - **Movie Management**: Add, retrieve, and delete movies. Ensure unique IMDb IDs for each movie.
 - **Review Management**: Create and retrieve reviews for movies.
-- 
 ## Technology Stack
 
 - **Java**: Programming language used
